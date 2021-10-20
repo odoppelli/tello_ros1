@@ -1,0 +1,7 @@
+<launch>
+    <include file="$(find tello_driver)/launch/ar_track_alvar.launch" />
+    <include file="$(find tello_driver)/launch/joy_teleop.launch"/>
+    <include file="$(find tello_driver)/launch/rc_pid_marker.launch"/>
+    <node name="distance_ar_tag" pkg="it2_pkg" type="distance_ar_tag.py" output="screen"/>
+    <node name="commander" pkg="it2_pkg" type="commander.py" output="screen"/>
+</launch>

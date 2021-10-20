@@ -1,0 +1,9 @@
+<launch>
+    <include file="$(find gate_pilot)/launch/joy_teleop.launch"/>
+    <include file="$(find gate_pilot)/launch/rc_pid_marker.launch"/>
+    <node name="tf2_broadcaster" pkg="tello_driver" type="tf_broadcaster.py" output="screen"/>
+    <node name="dutchman" pkg="tello_driver" type="flying_dutchman.py" output="screen"/>
+    <node name="steuermann" pkg="tello_driver" type="steuermann.py" output="screen"/>
+    <node name="dutchman_position" pkg="tello_driver" type="dutchman_positionsbestimmung.py" output="screen"/>
+    <node name="tf_zero_helper" pkg="tello_driver" type="tf_helper.py" output="screen"/>
+</launch>

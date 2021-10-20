@@ -1,0 +1,38 @@
+<launch>
+
+	<node name="x_vel" pkg="pid" type="controller" ns="x_dir" output="screen" >
+      <param name="Kp" value="2" />
+      <param name="Ki" value="0.3" />
+      <param name="Kd" value="0.06" />
+      <param name="upper_limit" value="1.0" />
+      <param name="lower_limit" value="-1.0" />
+      <param name="windup_limit" value="1.0" />
+      <param name="max_loop_frequency" value="50.0" />
+      <param name="min_loop_frequency" value="30.0" />
+     </node>
+
+	<node name="y_vel" pkg="pid" type="controller" ns="y_dir" output="screen" >
+      <param name="Kp" value="2" />
+      <param name="Ki" value="0.3" />
+      <param name="Kd" value="0.06" />
+      <param name="upper_limit" value="1.0" />
+      <param name="lower_limit" value="-1.0" />
+      <param name="windup_limit" value="1.0" />
+      <param name="max_loop_frequency" value="60.0" />
+      <param name="min_loop_frequency" value="30.0" />
+     </node>
+
+	<node name="z_vel" pkg="pid" type="controller" ns="z_dir" output="screen" >
+      <param name="Kp" value="3.5" />
+      <param name="Ki" value="0.8" />
+      <param name="Kd" value="2" />
+      <param name="upper_limit" value="1.0" />
+      <param name="lower_limit" value="-1.0" />
+      <param name="windup_limit" value="1.0" />
+      <param name="max_loop_frequency" value="50.0" />
+      <param name="min_loop_frequency" value="30.0" />
+
+     </node>
+
+
+</launch>
